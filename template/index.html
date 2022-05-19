@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="Scroll n Shop"
+      content="Ecommerce. Making it easier to find all your shopping needs"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Scroll n Shop</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="grid-container">
+      <header class="header">
+        <div class="brand">
+          <button onclick="openMenu()">
+            &#9776;
+          </button>
+          <a href="index.html">amazona</a>
+        </div>
+        <div class="header-links">
+          <a href="cart.html">Cart</a>
+          <a href="signin.html">Sign In</a>
+        </div>
+      </header>
+      <aside class="sidebar">
+        <h3>Shopping Categories</h3>
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+          <li>
+            <a href="index.html">Pants</a>
+          </li>
+  
+          <li>
+            <a href="index.html">Shirts</a>
+          </li>
+  
+        </ul>
+      </aside>
+      <main class="main">
+        <div class="content">
+          <ul class="products">
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+            <li>
+              <div class="product">
+                <img class="product-image" src="images/shirts.jpg" alt="product" />
+                <div class="product-name">
+                  <a href="product.html">3 pack Short Sleeves</a>
+                </div>
+                <div class="product-brand">Nike</div>
+                <div class="product-price">$60</div>
+                <div class="product-rating">4.5 Stars (10 Reviews)</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </main>
+      <footer class="footer">
+        All right reserved.
+      </footer>
+    </div>
+    <script>
+      function openMenu() {
+        document.querySelector(".sidebar").classList.add("open");
+      }
+      function closeMenu() {
+        document.querySelector(".sidebar").classList.remove("open")
+      }
+    </script>
+  </body>
+</html>
