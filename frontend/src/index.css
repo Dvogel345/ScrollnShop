@@ -9,15 +9,6 @@ body {
 .site-container {
   min-height: 100vh;
 }
-header {
-  background-color: #323232;
-  padding: 1rem;
-}
-header .brand {
-  color: #ffffff;
-  font-weight: bold;
-  text-decoration: none;
-}
 main {
   flex: 1;
 }

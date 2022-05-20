@@ -1,13 +1,18 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import React from 'react';
-import Navbar from 'react-bootstrap/Container';
-import Container from 'react-bootstrap/Navbar';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Badge from 'react-bootstrap/Badge';
+import Nav from 'react-bootstrap/Nav';
 import { LinkContainer } from 'react-router-bootstrap';
 // import data from './data';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
+import { Store } from './Store';
 
 function App() {
+  const { state } = useContext(Store);
+  const { cart } = state;
   return (
     <BrowserRouter>
       <div className="d-flex flex-column site-container">
@@ -15,8 +20,20 @@ function App() {
           <Navbar bg="dark" variant="dark">
             <Container>
               <LinkContainer to="/">
-                <Navbar className='brand'>Scroll n Shop</Navbar>
+                <Navbar.Brand className='brand'>Scroll n Shop</Navbar.Brand>
               </LinkContainer>
+              <Nav className="me-auto">
+                <Link to="/cart" className="nav-link">
+                  Cart
+                  {/* there are items in the cart */}
+                  {cart.cartItems.length > 0 && (
+                    // badge shows there are items in the cart
+                    <Badge pill bg="danger">
+                      {cart.cartItems.length}
+                    </Badge>
+                  )}
+                </Link>
+              </Nav>
             </Container>
           </Navbar>
         </header>
