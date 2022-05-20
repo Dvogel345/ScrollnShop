@@ -34,9 +34,20 @@ const data = {
         brand: 'Nike',
         rating: 4.5,
         numReviews: 10,
-        description: 'high quality shirt',
+        description: 'high quality pants',
+      },{
+        name: 'Nike Commuter Pants',
+        slug: 'nike-commuter-pants',
+        category: 'Pants',
+        image: '/images/pt2.jpg',
+        price: 120,
+        countInStock: 10,
+        brand: 'Nike',
+        rating: 4.5,
+        numReviews: 10,
+        description: 'high quality sportswear',
       },
-    ]
+    ],
   }
 
   export default data;
