@@ -6,17 +6,17 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-header{
-  background-color: #404040;
+.site-container {
+  min-height: 100vh;
+}
+header {
+  background-color: #323232;
   padding: 1rem;
 }
-header a{
+header .brand {
   color: #ffffff;
   font-weight: bold;
   text-decoration: none;
-}
-.site-container {
-  min-height: 100vh;
 }
 main {
   flex: 1;
