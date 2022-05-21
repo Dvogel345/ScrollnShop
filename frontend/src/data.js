@@ -1,4 +1,20 @@
+import bcrypt from 'bcryptjs';
+
 const data = {
+  users: [
+    {
+      name: 'Derek',
+      email: 'admin@test.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: true,
+    },
+    {
+      name: 'FooBar',
+      email: 'FooBar@test.com',
+      password: bcrypt.hashSync('123456'),
+      isAdmin: false,
+    },
+  ],
   products: [
     {
       // _id: 1,
@@ -51,8 +67,57 @@ const data = {
       rating: 4.5,
       numReviews: 10,
       description: 'high quality product',
+    },{
+      // _id: 4,
+      name: 'Apple iPhone 13',
+      slug: 'apple-iphone-13',
+      category: 'Smartphones',
+      image: '/images/ph1.jpg',
+      price: 1000,
+      countInStock: 15,
+      brand: 'Iphone',
+      rating: 5.0,
+      numReviews: 40,
+      description: 'The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. Superfast 5G.1 And a brighter Super Retina XDR display.',
+    },{
+      // _id: 4,
+      name: 'Apple iPhone 13',
+      slug: 'apple-iphone-13',
+      category: 'Smartphones',
+      image: '/images/ph2.jpg',
+      price: 1000,
+      countInStock: 15,
+      brand: 'Iphone',
+      rating: 5.0,
+      numReviews: 40,
+      description: 'The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. Superfast 5G.1 And a brighter Super Retina XDR display.',
+    },{
+      // _id: 4,
+      name: 'Apple iPhone 13',
+      slug: 'apple-iphone-13',
+      category: 'Smartphones',
+      image: '/images/ph3.jpg',
+      price: 1000,
+      countInStock: 15,
+      brand: 'Iphone',
+      rating: 5.0,
+      numReviews: 40,
+      description: 'The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. Superfast 5G.1 And a brighter Super Retina XDR display.',
+    },{
+      // _id: 4,
+      name: 'Apple iPhone 13',
+      slug: 'apple-iphone-13',
+      category: 'Smartphones',
+      image: '/images/ph4.jpg',
+      price: 1000,
+      countInStock: 15,
+      brand: 'Iphone',
+      rating: 5.0,
+      numReviews: 40,
+      description: 'The most advanced dual-camera system ever on iPhone. Lightning-fast A15 Bionic chip. A big leap in battery life. Durable design. Superfast 5G.1 And a brighter Super Retina XDR display.',
     },
   ],
 };
 
-  export default data;
+export default data;
+
