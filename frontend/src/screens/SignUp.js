@@ -25,8 +25,12 @@ export default function SignUp() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    if (password !== confirmPassword) {
+      toast.error('Passwords do not match');
+    }
     try {
       const { data } = await axios.post('/api/users/signup', {
+        name,
         email,
         password,
       });
