@@ -9,7 +9,7 @@ import { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
 
-export default function SigninScreen() {
+export default function Signin() {
   const navigate = useNavigate();
   const { search } = useLocation();
   const redirectInUrl = new URLSearchParams(search).get('redirect');
