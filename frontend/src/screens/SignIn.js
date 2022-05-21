@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 import { Store } from "../Store";
 import { Helmet } from 'react-helmet-async';
 import axios from 'axios';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 export default function SigninScreen() {
   const navigate = useNavigate();
@@ -17,6 +17,7 @@ export default function SigninScreen() {
   const [password, setPassword] = useState('');
 
   const { state, dispatch: ctxDispatch } = useContext(Store);
+  const { userInfo } = state;
 
   const submitHandler = async (e) => {
     e.preventDefault();
@@ -29,10 +30,16 @@ export default function SigninScreen() {
       localStorage.setItem('userInfo', JSON.stringify(data));
       navigate(redirect || '/');
     } catch (err) {
-      console.log(err);
+      // console.log(err);
       alert('Invalid email or password');
     }
-  }
+  };
+
+  useEffect(() => {
+    if (userInfo) {
+      navigate(redirect)
+    }
+  }, [ navigate, redirect, userInfo ])
   return (
     <Container className="small-container">
       <Helmet>
