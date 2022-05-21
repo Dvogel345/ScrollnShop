@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { getError } from '../utils';
+import CheckoutSteps from '../components/CheckoutSteps';
 
 export default function Signin() {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ export default function Signin() {
   }, [ navigate, redirect, userInfo ])
   return (
     <Container className="small-container">
+      <CheckoutSteps step1></CheckoutSteps>
       <Helmet>
         <title>Sign In</title>
       </Helmet>
