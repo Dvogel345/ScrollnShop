@@ -23,11 +23,12 @@ const reducer = (state, action) => {
 };
 
 function HomeScreen() {
-  const [{ loading, error, products }, dispatch] = useReducer(logger(reducer), {
-    products: [],
+
+  const [{ loading, products }, dispatch] = useReducer(reducer, {
     loading: true,
-    error: '',
-  });
+    products: [],
+});
+
   // const [products, setProducts] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -48,11 +49,11 @@ function HomeScreen() {
       </Helmet>
       <h1>Featured Products</h1>
       <div className="products">
-        {loading ? (
+        {/* {loading ? (
           <LoadingBox />
         ) : error ? (
           <MessageBox variant="danger">{error}</MessageBox>
-        ) : (
+        ) : ( */}
           <Row>
             {products.map((product) => (
               <Col key={product.slug} sm={6} md={4} lg={3} className="mb-3">
@@ -60,7 +61,7 @@ function HomeScreen() {
               </Col>
             ))}
           </Row>
-        )}
+        {/* )} */}
       </div>
     </div>
   );
