@@ -20,8 +20,8 @@
   "homepage": "https://github.com/Dvogel345/ScrollnShop#readme",
   "dependencies": {
     "firebase": "^9.8.1",
-    "node": "^17.7.2",
+    "node": "^16.x",
     "nodemon": "^2.0.16",
-    "npm": "^8.10.0"
+    "npm": "^8.x"
   }
 }
